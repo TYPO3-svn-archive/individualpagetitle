@@ -1,0 +1,43 @@
+# wichtiger Hinweis:
+# config.noPageTitle = 1 besagt aus, dass der aktuelle Seitenname nicht mehr angezeigt werden soll. 
+# Der Inhalt des Titel-Feldes aus dem Template wird trotzdem angezeigt.
+# Man erhält also zwei <title>-Tags, außer man schaltet mit
+
+config.noPageTitle = 2
+page.config.noPageTitle = 2
+# die Generierung des Title-Tags vollkommen aus.
+
+# Ein rootline Menü erstellen
+plugin.tx_individualpagetitle.titletagrootline = HMENU
+plugin.tx_individualpagetitle.titletagrootline {
+  special = rootline
+  special.range = 1|-1
+  includeNotInMenu = 1
+  1 = TMENU
+  1.wrap = | 
+  1.noBlur = 1
+  1.NO {
+    stdWrap.noTrimWrap = | | - |
+    doNotLinkIt=1
+  } 
+  1.CUR = 1
+  1.CUR {
+    stdWrap.noTrimWrap = | | |
+    doNotLinkIt=1
+  }
+}
+
+plugin.tx_individualpagetitle.titletag = COA
+plugin.tx_individualpagetitle.titletag {
+  10 = TEXT
+  10.noTrimWrap = |{$plugin.tx_individualpagetitle.prepend}
+  20 < plugin.tx_individualpagetitle.titletagrootline
+  20.stdWrap.override.data = page:tx_individualpagetitle_titletag
+  20.stdWrap.override.insertData = 1
+  30 = TEXT
+  30.noTrimWrap = |{$plugin.tx_individualpagetitle.append}
+  stdWrap.noTrimWrap = |<title>|</title>|
+}
+
+# Und jetzt auf der Seite noch anzeigen lassen.
+{$plugin.tx_individualpagetitle.page}.headerData.{$plugin.tx_individualpagetitle.headerdata} < plugin.tx_individualpagetitle.titletag

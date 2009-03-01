@@ -1,0 +1,17 @@
+# cat=
+plugin.tx_individualpagetitle {
+	# 
+	prepend = | prepend |
+	#  
+	append = | append | 
+	# 
+	rootline = 1
+	# Seiten Struktur von hinten nach vorne
+	rootline.reverseOrder = 0
+	# 
+	page = page
+	# hederdata position
+	headerdata = 20
+	# 
+	doNotAddHeaderdata = 0
+}
