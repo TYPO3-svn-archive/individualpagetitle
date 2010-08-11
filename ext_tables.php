@@ -34,6 +34,7 @@ t3lib_extMgm::addToAllTCAtypes("pages_language_overlay","tx_individualpagetitle_
 
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/Individual_Pagetitle/', 'Individual Pagetitle');
 
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageOverlayFields'] .= ',tx_individualpagetitle_titletag';
 
 t3lib_extMgm::addLLrefForTCAdescr('pages','EXT:individualpagetitle/locallang_csh_pages.xml');
 t3lib_extMgm::addLLrefForTCAdescr('pages_language_overlay','EXT:individualpagetitle/locallang_csh_lang_overl.xml');

@@ -1,17 +1,17 @@
-# cat=
 plugin.tx_individualpagetitle {
-	# 
+	# cat=tx_individualpagetitle; type=string; label= prepend: Text which should be before the individual page title. Put it into two pipes "| |" ! 
 	prepend = | prepend |
-	#  
+	# cat=tx_individualpagetitle; type=string; label= append: Text which should be after the individual page title. Put it into two pipes "| |" !  
 	append = | append | 
 	# 
-	rootline = 1
+	# rootline = 1
 	# Seiten Struktur von hinten nach vorne
-	rootline.reverseOrder = 0
-	# 
+	# rootline.reverseOrder = 0
+	# cat=tx_individualpagetitle; type=string; label= page-object: usually "page" (you have then "page = PAGE" somewhere in your TypoScript)  
 	page = page
 	# hederdata position
+	# cat=tx_individualpagetitle; type=string; label= headerdata position: Position where we want to set the pagetitle "headerData.20." 
 	headerdata = 20
 	# 
-	doNotAddHeaderdata = 0
+	# doNotAddHeaderdata = 0
 }
