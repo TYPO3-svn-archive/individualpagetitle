@@ -14,7 +14,7 @@
         </languageKey>
         <languageKey index="de" type="array">
            <label index="tx_individualpagetitle_titletag.description">Geben Sie hier den Seitentitel an (er in der Browser-Titel-Leiste angezeigt wird)</label>
-            <label index="tx_individualpagetitle_titletag.syntax">Dieses Feld ist optional. Sie können hier die den Titel der der Browser-Titel-Leiste angezeigt wird für diese Seite anpasen.</label>
+            <label index="tx_individualpagetitle_titletag.syntax">Dieses Feld ist optional. Sie können hier den Titel der in der Browser-Titel-Leiste angezeigt wird für diese Seite bestimmen. Falls Sie dieses Feld nicht ausfüllen, erscheint ein automatisch generierter Titel.</label>
         </languageKey>
     </data>
     <orig_hash type="array">
