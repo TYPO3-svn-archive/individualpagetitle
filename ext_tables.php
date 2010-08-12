@@ -19,6 +19,7 @@ t3lib_extMgm::addToAllTCAtypes("pages","tx_individualpagetitle_titletag;;;;1-1-1
 $tempColumns = Array (
 	"tx_individualpagetitle_titletag" => Array (		
 		"exclude" => 1,		
+		'l10n_mode' => 'noCopy',
 		"label" => "LLL:EXT:individualpagetitle/locallang_db.xml:pages_language_overlay.tx_individualpagetitle_titletag",		
 		"config" => Array (
 			"type" => "input",	
@@ -33,7 +34,7 @@ t3lib_extMgm::addTCAcolumns("pages_language_overlay",$tempColumns,1);
 t3lib_extMgm::addToAllTCAtypes("pages_language_overlay","tx_individualpagetitle_titletag;;;;1-1-1",'','after:title');
 
 t3lib_extMgm::addStaticFile($_EXTKEY,'static/Individual_Pagetitle/', 'Individual Pagetitle');
-
+// @TODO: funktioniert nicht korrekt!
 $GLOBALS['TYPO3_CONF_VARS']['FE']['pageOverlayFields'] .= ',tx_individualpagetitle_titletag';
 
 t3lib_extMgm::addLLrefForTCAdescr('pages','EXT:individualpagetitle/locallang_csh_pages.xml');
